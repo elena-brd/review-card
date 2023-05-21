@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --preview-card-bg-color: #272130;
+    --main-card-bg: #2c2847;
+    --primary-color: #181723;
+    --star-color: #FFC107;
+    --light-color: #e0e0e0;
+    --white-color: #fff;
+    --yellow-logo: #e2bc00;
+    --orange-logo: #FF8D29;
+    --secondary-color: #A85CF9;
+}
+
+/* utilities */
+a {
+    text-decoration: none;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: #bbb;
+    font-size: 0.8rem;
+    padding: 0.8rem 1.5rem;
+    margin: 0.4rem 0.2rem;
+    border-radius: 5px;
+}
+
+.btn:hover,
+.current {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background: var(--primary-color);
+    color: var(--white-color);
+    line-height: 1.4;
+}
+
+/* container */
+#card .card-container {
+    background: var(--preview-card-bg-color);
+    width: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5rem auto;
+    padding: 2.5rem 3rem;
+    border-radius: 5px;
+}
+
+/* title */
+#card .title h2 {
+    font-weight: 500;
+    padding-bottom: 2rem;
+}
+
+/* search form */
+#card input[type="search"] {
+    border: none;
+    background: none;
+    color: var(--light-color);
+    font-size: 0.9rem;
+}
+
+#card input[type="search"]:focus {
+    outline: none;
+    color: var(--light-color);
+    font-size: 0.9rem;
+}
+
+#card input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+#card input[type="search"]::placeholder {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+#card .search-form {
+    background: var(--main-card-bg);
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 2px solid #554c4c;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+#card .search-form i {
+    color: #bbb;
+    margin-right: 0.3rem;
+}
+
+/* review cards */
+#card .card {
+    background: var(--main-card-bg);
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+#card .user-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+#card .orange-logo,
+#card .yellow-logo {
+    background: var(--orange-logo);
+    padding: 0.2rem 0.8rem;
+    border-radius: 50%;
+    text-transform: uppercase;
+    margin-right: 0.5rem;
+}
+
+#card .yellow-logo {
+    background: var(--yellow-logo);
+    padding: 0.2rem 0.6rem;
+}
+
+#card i {
+    color: var(--star-color);
+}
+
+#card .user-review p {
+    font-size: 0.8rem;
+    padding: 2rem 0;
+}
+
+#card .date p {
+    color: #bbb;
+    font-size: 0.8rem;
+}
+
+@media(max-width: 700px) {
+    #card .card-container {
+        width: 450px;
+    }
+}
